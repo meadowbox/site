@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Meadowbox</h1>
+
+  <p>
+    We're still getting ready to open up shop, and we can't wait to show you our first product.
+    Sign up to be first in line to order!
+  </p>
+
+  <%= form_for @user do |f| %>
+    <div class="form-group">
+      <label>First name</label>
+      <%= f.text_field :first_name, placeholder: 'First name', class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <label>Last name</label>
+      <%= f.text_field :last_name, placeholder: 'Last name', class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <%= f.text_field :email, placeholder: 'Email', class: "form-control" %>
+    </div>
+
+    <%= f.submit 'Submit' %>
+  <% end %>
+</div>
