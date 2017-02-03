@@ -3,7 +3,10 @@
   p {
     margin: 30px 0;
   }
-  .buttn {
+  .buttn.submit {
     margin-top: 25px;
+    min-width: 200px;
+    width: 60%;
+    font-size: 28px;
   }
 }
