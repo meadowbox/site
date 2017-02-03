@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container main center">
   <div class="row">
-    <div class="col-lg-5 col-md-6 col-sm-7 col-centered">
+    <div class="col-lg-5 col-md-6 col-sm-7 col-centered content form">
       <h1>Meadowbox</h1>
 
       <p>
@@ -24,7 +24,11 @@
           <%= f.text_field :email, placeholder: 'Email', class: "form-control" %>
         </div>
 
-        <%= f.submit 'Submit' %>
+        <div class="form-group text-center">
+          <%= button_tag(class: 'buttn submit peach') do %>
+            <i class='fa fa-envelope-o'></i>
+          <% end %>
+        </div>
       <% end %>
     </div>
   </div>
