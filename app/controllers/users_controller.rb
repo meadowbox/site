@@ -10,10 +10,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      flash[:success] = "Thank you!"
+      flash[:success] = "Thank you! We'll let you know when our flowers are available."
       redirect_to root_path
     elsif User.find_by_email(user_params[:email].downcase)
-      flash[:success] = "You already signed up!"
+      flash[:success] = "You already signed up! We'll reach out to you as soon as we're ready."
       redirect_to root_path
     else
       flash[:danger] = @user.errors.full_messages.join(', ').capitalize
