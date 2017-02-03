@@ -12,6 +12,9 @@ class UsersController < ApplicationController
     if @user.save
       flash[:success] = "Thank you!"
       redirect_to root_path
+    elsif User.find_by_email(user_params[:email].downcase)
+      flash[:success] = "You already signed up!"
+      redirect_to root_path
     else
       flash[:danger] = @user.errors.full_messages.join(', ').capitalize
       redirect_to root_path(user: user_params)

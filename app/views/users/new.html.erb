@@ -6,28 +6,32 @@
         Sign up to be first in line to order!
       </p>
 
-      <%= form_for @user do |f| %>
-        <div class="form-group">
-          <label>First name</label>
-          <%= f.text_field :first_name, placeholder: 'First name', class: "form-control" %>
-        </div>
+      <% unless flash[:success] %>
+        <%= form_for @user do |f| %>
+          <div class="form-group">
+            <label>First name</label>
+            <%= f.text_field :first_name, placeholder: 'First name', class: "form-control" %>
+          </div>
 
-        <div class="form-group">
-          <label>Last name</label>
-          <%= f.text_field :last_name, placeholder: 'Last name', class: "form-control" %>
-        </div>
+          <div class="form-group">
+            <label>Last name</label>
+            <%= f.text_field :last_name, placeholder: 'Last name', class: "form-control" %>
+          </div>
 
-        <div class="form-group">
-          <label>Email</label>
-          <%= f.text_field :email, placeholder: 'Email', class: "form-control" %>
-        </div>
+          <div class="form-group">
+            <label>Email</label>
+            <%= f.text_field :email, placeholder: 'Email', class: "form-control" %>
+          </div>
 
-        <div class="form-group text-center">
-          <%= button_tag(class: 'buttn submit peach') do %>
-            <i class='fa fa-envelope-o'></i>
-          <% end %>
-        </div>
+          <div class="form-group text-center">
+            <%= button_tag(class: 'buttn submit peach') do %>
+              <i class='fa fa-envelope-o'></i>
+            <% end %>
+          </div>
+        <% end %>
       <% end %>
+
+      <%= render 'shared/flash' %>
     </div>
   </div>
 </div>
