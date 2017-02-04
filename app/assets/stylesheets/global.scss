@@ -11,6 +11,15 @@ body {
 
 
 
+a {
+  color: #333;
+  &:hover {
+    color: #5C8368;
+  }
+}
+
+
+
 .first-content {
   margin-top: 50px;
 }
