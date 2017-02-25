@@ -10,6 +10,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem "font-awesome-rails", "4.7.0"
 gem 'rails_admin', "1.1.1"
+gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
   gem 'byebug'
