@@ -45,4 +45,8 @@ RailsAdmin.config do |config|
       admin && admin.authenticate(password) ? admin : nil
     end
   end
+
+  config.model 'Admin' do
+    visible false
+  end
 end
